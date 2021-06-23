@@ -1,0 +1,60 @@
+.start-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35rem;
+  height: 25rem;
+  padding: 1rem;
+  margin-bottom: 8rem;
+  border: 2px solid slateblue;
+  border-radius: 1rem;
+
+
+  &__title{
+    font-size: 3rem;
+    color: slateblue;
+    margin-bottom: 4rem;
+  }
+
+  &__settings {
+    width: 20rem;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+    &__number-input{
+      width: 4rem;
+      height: 3rem;
+      font-size: 1.75rem;
+      text-align: center;
+      border-radius: 0.5rem;
+    }
+
+    &__select{
+      width: 6rem;
+      height: 3rem;
+      text-align: center;
+      font-size: 1.25rem;
+      border-radius: 0.5rem;
+    }
+  }
+
+  &__button button{
+    width: 8rem;
+    height: 2.5rem;
+    color: white;
+    background: slateblue;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    &:hover{
+      background: #15142b;
+    }
+
+    &:active{
+      background: white;
+      color: slateblue;
+      cursor: pointer;
+    }
+  }
+}

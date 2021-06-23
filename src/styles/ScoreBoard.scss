@@ -1,0 +1,15 @@
+.score-board{
+  font-size: 2.5rem;
+  color: slateblue;
+  letter-spacing: 0.25rem;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+
+  &__score{
+    border: 1px slateblue solid;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+    color: #499249;
+  }
+}
