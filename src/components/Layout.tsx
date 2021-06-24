@@ -20,6 +20,7 @@ const Layout: React.FC = () => {
   const examPageProps = {
     difficulty,
     numberOfQuestions,
+    setIsStart,
   };
 
   return (

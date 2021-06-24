@@ -6,7 +6,6 @@ import "../styles/ExamPage.scss";
 //components
 import ScoreBoard from "./ScoreBoard";
 import QuestionCard from "./QuestionCard";
-import NextButton from "./NextButton";
 
 //axios
 import axios from "axios";
@@ -18,11 +17,12 @@ interface IProps {
   examPageProps: {
     difficulty: string;
     numberOfQuestions: string;
+    setIsStart: React.Dispatch<React.SetStateAction<boolean>>;
   };
 }
 
 const ExamPage: React.FC<IProps> = ({ examPageProps }) => {
-  const { difficulty, numberOfQuestions } = examPageProps;
+  const { difficulty, numberOfQuestions, setIsStart } = examPageProps;
 
   const [questions, setQuestions] = useState<QuestionTypes[]>([]);
   const [score, setScore] = useState<number>(0);
@@ -49,7 +49,12 @@ const ExamPage: React.FC<IProps> = ({ examPageProps }) => {
     <div className="exam-page">
       <ScoreBoard score={score} />
       <div className="exam-page__questions">
-        <QuestionCard isLoading={isLoading} questions={questions} />
+        <QuestionCard
+          setIsStart={setIsStart}
+          isLoading={isLoading}
+          questions={questions}
+          setScore={setScore}
+        />
       </div>
     </div>
   );
